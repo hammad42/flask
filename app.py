@@ -20,9 +20,12 @@ def upload():
         os.mkdir(target)
 
     for file in request.files.getlist("file"):
+        print("ok")
         print(file)
+        print("ok")
         filename = file.filename
         destination = "/".join([target, filename])
+        print(filename)
         print(destination)
         file.save(destination)
 
